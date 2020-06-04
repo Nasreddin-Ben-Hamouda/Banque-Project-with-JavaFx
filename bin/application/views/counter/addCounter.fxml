@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1006.0" prefWidth="982.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.counter.AddCounterController">
+   <children>
+      <Pane layoutX="163.0" layoutY="14.0" prefHeight="927.0" prefWidth="656.0" style="-fx-border-color: grey; -fx-background-color: white;">
+         <children>
+            <Text fill="#f84545" layoutX="12.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                     * : désigne les champs obligatoires ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cin" layoutX="166.0" layoutY="71.0" prefHeight="36.0" prefWidth="351.0" promptText="entrez le CIN" />
+            <Label layoutX="104.0" layoutY="81.0" text="* CIN" />
+            <TextField fx:id="nom" layoutX="166.0" layoutY="136.0" prefHeight="36.0" prefWidth="351.0" promptText="entrez le nom" />
+            <Label layoutX="104.0" layoutY="139.0" text="* Nom" />
+            <TextField fx:id="prenom" layoutX="166.0" layoutY="198.0" prefHeight="36.0" prefWidth="351.0" promptText="entrez le prénom" />
+            <Label layoutX="100.0" layoutY="209.0" text="* Prénom" />
+            <Label layoutX="97.0" layoutY="261.0" prefHeight="36.0" prefWidth="67.0" text="* Date &#10;   Naiss" />
+            <DatePicker fx:id="dateNaiss" layoutX="166.0" layoutY="261.0" prefHeight="36.0" prefWidth="351.0" promptText="entrez la date de naissance" />
+            <Label layoutX="115.0" layoutY="406.0" text="* Tel" />
+            <TextField fx:id="tel" layoutX="166.0" layoutY="397.0" prefHeight="36.0" prefWidth="351.0" promptText="entrez le numero de tél" />
+            <Label layoutX="135.0" layoutY="522.0" text="* Sex" />
+            <ChoiceBox fx:id="sexSelect" layoutX="191.0" layoutY="513.0" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #dfe4ea;" />
+            <Label layoutX="335.0" layoutY="513.0" text="État&#10;Civile" />
+            <ChoiceBox fx:id="civStateSelect" layoutX="380.0" layoutY="513.0" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #dfe4ea;" />
+            <Button fx:id="submitBtn" graphicTextGap="7.0" layoutX="227.0" layoutY="824.0" mnemonicParsing="false" onMouseClicked="#onSubmit" prefHeight="43.0" prefWidth="230.0" style="-fx-background-color: #fed330; -fx-background-radius: 100PX; -fx-text-fill: black;" text="Enregistrer">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <HBox layoutX="114.0" layoutY="599.0" prefHeight="54.0" prefWidth="415.0">
+               <children>
+                  <Label text="*Continent" />
+                  <ChoiceBox fx:id="contSelect" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #dfe4ea;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Label layoutX="10.0" layoutY="53.0" text="*Etat">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="etatSelect" layoutX="81.0" layoutY="10.0" prefHeight="36.0" prefWidth="119.0" style="-fx-background-color: #dfe4ea;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+            </HBox>
+            <Label layoutX="104.0" layoutY="564.0" text="* Adresse: ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pays" layoutX="60.0" layoutY="663.0" prefHeight="36.0" prefWidth="122.0" promptText="* pays" />
+            <TextField fx:id="ville" layoutX="199.0" layoutY="663.0" prefHeight="36.0" prefWidth="122.0" promptText="ville" />
+            <TextField fx:id="rue" layoutX="335.0" layoutY="663.0" prefHeight="36.0" prefWidth="122.0" promptText="* rue" />
+            <TextField fx:id="codePostale" layoutX="472.0" layoutY="663.0" prefHeight="36.0" prefWidth="122.0" promptText="* code postale" />
+            <Text fx:id="cinErr" fill="#e41411" layoutX="166.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="err" visible="false" wrappingWidth="209.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="nomErr" fill="#e41411" layoutX="166.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="209.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="prenomErr" fill="#e41411" layoutX="166.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="209.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="dateNaissErr" fill="#e41411" layoutX="166.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="209.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="telErr" fill="#e41411" layoutX="166.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="etatErr" fill="#e41411" layoutX="384.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="120.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="paysErr" fill="#e41411" layoutX="63.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="122.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="rueErr" fill="#e41411" layoutX="335.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="122.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="codePostaleErr" fill="#e41411" layoutX="472.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="122.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="sommeErr" fill="#e41411" layoutX="271.0" layoutY="805.0" strokeType="OUTSIDE" strokeWidth="0.0" text="montant invalide" visible="false" wrappingWidth="128.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="email" layoutX="166.0" layoutY="457.0" prefHeight="36.0" prefWidth="351.0" promptText="entrez l'email" />
+            <Label layoutX="111.0" layoutY="466.0" text="* Email" />
+            <Text fx:id="emailErr" fill="#e41411" layoutX="164.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="209.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="sexErr" fill="#e41411" layoutX="188.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="121.99999999999994">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="contErr" fill="#e41411" layoutX="196.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="128.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="error" fill="#f84545" layoutX="180.0" layoutY="900.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Une erreur est survenue, ressayer plus tard! " visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="msgSucc" fill="#109709" layoutX="165.0" layoutY="900.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guichetier ajouter avec succées" visible="false" wrappingWidth="427.04248046875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="dateEmbch" layoutX="166.0" layoutY="326.0" prefHeight="36.0" prefWidth="351.0" promptText="entrez la date d'embauche" />
+            <Label layoutX="99.0" layoutY="326.0" prefHeight="36.0" prefWidth="67.0" text="* Date &#10;   Embauche" />
+            <Text fx:id="dateEmchErr" fill="#e41411" layoutX="176.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  obligatoire" visible="false" wrappingWidth="209.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="salaire" layoutX="175.0" layoutY="736.0" prefHeight="36.0" prefWidth="351.0" promptText="Entrer le salaire" />
+            <Label layoutX="115.0" layoutY="745.0" text="* Salaire" />
+            
+         </children></Pane>
+   </children>
+</AnchorPane>

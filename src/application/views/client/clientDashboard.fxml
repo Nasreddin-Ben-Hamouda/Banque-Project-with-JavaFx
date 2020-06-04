@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" stylesheets="@../../stylesheetClientDash.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.client.ClientDashboardController">
+   <children>
+      <VBox prefHeight="800.0" style="-fx-background-color: ;" styleClass="sidebar">
+         <children>
+            <Label prefHeight="83.0" prefWidth="300.0" style="-fx-background-color: #FED350;" text="     Tableau de bord" textFill="WHITE">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="303.0">
+               <children>
+                  <FontAwesomeIcon fill="LIME" iconName="USER" size="2.2em" wrappingWidth="20.214285850524902">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Text fx:id="usernameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="245.7294921875">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Text fill="#f2eaea" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des comptes" textAlignment="CENTER" wrappingWidth="283.7294921875">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <HBox fx:id="chercherCompteHB" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0">
+               <children>
+                  <FontAwesomeIcon glyphStyle="-fx-fill:#FED350" glyphStyleClass="" iconName="SEARCH" size="1.3em">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <TextField fx:id="chercherCompte" onKeyPressed="#onChercherCompteKeyPress" prefHeight="29.0" prefWidth="220.0" promptText="chercher par num compte" style="-fx-background-color: transparent; -fx-text-inner-color: white;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="listerComptes" alignment="CENTER_LEFT" layoutX="10.0" layoutY="142.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onListerComptesClick" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+               <children>
+                  <FontAwesomeIcon glyphStyle="-fx-fill:#FED350" glyphStyleClass="" iconName="ARCHIVE" size="1.3em">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label fx:id="listAccounts" prefHeight="20.0" prefWidth="132.0" text="Lister Comptes" textFill="#7c8184">
+                     <font>
+                        <Font name="Comfortaa Regular" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <Text fill="#f2eaea" layoutX="10.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transactions" textAlignment="CENTER" wrappingWidth="283.7294921875">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="40.0" />
+               </VBox.margin>
+            </Text>
+            <HBox fx:id="retirer" alignment="CENTER_LEFT" layoutX="10.0" layoutY="382.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onRetirerArgentClick" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+               <children>
+                  <FontAwesomeIcon glyphStyle="-fx-fill:#FED350" glyphStyleClass="" iconName="MINUS" size="1.3em">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label fx:id="retirerArgent" prefHeight="20.0" prefWidth="132.0" text="Retirer argents" textFill="#7c8184">
+                     <font>
+                        <Font name="Comfortaa Regular" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <ImageView fitHeight="100.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+               <image>
+                  <Image url="@../../../nabeul-info-banque-attijari.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="90.0" top="100.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="303.0" prefHeight="800.0" style="-fx-background-color: white;">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="1001.0" style="-fx-background-color: #353b48;" styleClass="box" stylesheets="@../../stylesheet.css">
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <Label fx:id="diplayTargetHeaderTitle" layoutX="289.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="400.0" style="-fx-alignment: center;" text="Accueil" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Noto Serif Hebrew Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="703.0" layoutY="8.0" prefHeight="70.0" prefWidth="291.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#onProfileClick" prefHeight="70.0" prefWidth="125.0">
+                           <children>
+                              <FontAwesomeIcon glyphStyle="-fx-fill:#f44949" glyphStyleClass="" iconName="COG" size="1.3em">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <Label prefHeight="20.0" prefWidth="89.0" text="Profile" textFill="#7c8184">
+                                 <font>
+                                    <Font name="Comfortaa Regular" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#onDeconnexionClick" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <FontAwesomeIcon glyphStyle="-fx-fill:#f44949" glyphStyleClass="" iconName="POWER_OFF" size="1.3em">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <Label prefHeight="20.0" prefWidth="132.0" text="Déconnexion" textFill="#7c8184">
+                                 <font>
+                                    <Font name="Comfortaa Regular" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <ScrollPane fx:id="displayTarget" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="714.0" prefWidth="1001.0" style="-fx-background-color: white;" >
+             <BorderPane>
+                     <center>
+                        <ImageView fitHeight="616.0" fitWidth="711.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../nabeul-info-banque-attijari.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <padding>
+                        <Insets left="180.0" />
+                     </padding>
+                  </BorderPane>
+                  </ScrollPane>
+         </children></VBox>
+   </children>
+</AnchorPane>

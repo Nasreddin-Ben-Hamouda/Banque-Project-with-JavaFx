@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="1586.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.account.ListAccountsController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <ScrollPane layoutX="40.0" layoutY="137.0" prefHeight="311.0" prefWidth="961.0">
+         <content>
+            <TableView fx:id="tableview" prefHeight="309.0" prefWidth="1505.0">
+              <columns>
+                 <TableColumn fx:id="number" prefWidth="157.0" text="Numéro" />
+                 <TableColumn fx:id="type" prefWidth="157.0" text="Type" />
+                  <TableColumn fx:id="money" prefWidth="168.0" text="Solde" />
+                  <TableColumn fx:id="threshold" prefWidth="158.0" text="Seuil" />
+                  <TableColumn fx:id="isAvailable" prefWidth="157.0" text="Est Valable" />
+                  <TableColumn fx:id="openingDate" prefWidth="162.0" text="Date ouverture" />
+                  <TableColumn fx:id="closingDate" prefWidth="157.0" text="Date fermeture" />
+                  <TableColumn fx:id="owner" prefWidth="185.0" text="Client" />
+                  <TableColumn fx:id="createdBy" prefWidth="202.0" text="Crée par" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="filterField" layoutX="142.0" layoutY="89.0" prefHeight="25.0" prefWidth="348.0" promptText="chercher par type,nom de client" style="-fx-background-color: #E5E7E9;" />
+      <Label layoutX="22.0" layoutY="92.0" text="Chercher">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutY="2.0" prefHeight="51.0" prefWidth="725.0" style="-fx-background-color: #fed350;">
+         <children>
+            <Label layoutX="41.0" layoutY="11.0" text="Affichage de la liste des comptes">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="53.0" prefHeight="5.0" prefWidth="725.0" style="-fx-background-color: #ECF142;" />
+    </children>
+</AnchorPane>

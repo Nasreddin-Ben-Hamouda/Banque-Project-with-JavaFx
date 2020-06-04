@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="1586.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.client.ListClientsController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <ScrollPane layoutX="19.0" layoutY="137.0" prefHeight="293.0" prefWidth="969.0">
+         <content>
+            <TableView fx:id="tableview" prefHeight="309.0" prefWidth="1573.0">
+              <columns>
+                  <TableColumn fx:id="number" prefWidth="157.0" text=" Numéro" />
+                  <TableColumn fx:id="empName" prefWidth="157.0" text=" Name" />
+                  <TableColumn fx:id="email" prefWidth="208.0" text=" Email" />
+                  <TableColumn fx:id="cin" prefWidth="154.0" text="CIN" />
+                  <TableColumn fx:id="tel" prefWidth="168.0" text="TEL" />
+                  <TableColumn fx:id="dateNaiss" prefWidth="157.0" text="Date Naissance" />
+                  <TableColumn fx:id="sex" prefWidth="157.0" text="SEX" />
+                  <TableColumn fx:id="etatCivile" prefWidth="157.0" text="Etat Civile" />
+                  <TableColumn fx:id="adresse" prefWidth="413.0" text="Adresse" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="filterField" layoutX="142.0" layoutY="89.0" prefHeight="25.0" prefWidth="348.0" promptText="chercher par num,cin,nom" style="-fx-background-color: #E5E7E9;" />
+      <Label layoutX="22.0" layoutY="92.0" text="Chercher">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutY="2.0" prefHeight="51.0" prefWidth="725.0" style="-fx-background-color: #fed350;">
+         <children>
+            <Label layoutX="41.0" layoutY="11.0" text="Affichage de la liste des clients">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="53.0" prefHeight="5.0" prefWidth="725.0" style="-fx-background-color: #ECF142;" />
+    </children>
+</AnchorPane>

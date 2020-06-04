@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="1237.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.counter.ShowLastThreeCounterOperationsController">
+   <children>
+      <GridPane fx:id="gridPane1" layoutX="202.0" layoutY="191.0" prefHeight="263.0" prefWidth="581.0" style="-fx-border-color: black; -fx-background-color: #ecf0f1;" visible="false">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" wrappingWidth="88.62060546875">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date execution" textAlignment="CENTER" wrappingWidth="99.45263671875" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte Source" textAlignment="CENTER" wrappingWidth="98.40576171875" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="type1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="384.7294921875" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="dateExec1" layoutX="136.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="390.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="cptSrc1" layoutX="136.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="389.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="41.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte Destination" textAlignment="CENTER" wrappingWidth="116.40576171875" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="cptDest1" layoutX="191.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="389.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="121.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="430.0" />
+         </columnConstraints>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Text fx:id="title1" fill="#66ab38" layoutX="202.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération 1" textAlignment="CENTER" visible="false" wrappingWidth="581.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fx:id="title2" fill="#66ab38" layoutX="202.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération 2" textAlignment="CENTER" visible="false" wrappingWidth="581.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <GridPane fx:id="gridPane2" layoutX="202.0" layoutY="537.0" prefHeight="263.0" prefWidth="581.0" style="-fx-border-color: black; -fx-background-color: #ecf0f1;" visible="false">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" wrappingWidth="88.62060546875">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date execution" textAlignment="CENTER" wrappingWidth="99.45263671875" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte Source" textAlignment="CENTER" wrappingWidth="98.40576171875" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="type2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="384.7294921875" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="dateExec2" layoutX="136.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="390.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="cptSrc2" layoutX="136.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="389.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="41.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte Destination" textAlignment="CENTER" wrappingWidth="116.40576171875" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="cptDest2" layoutX="191.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="389.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="121.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="430.0" />
+         </columnConstraints>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Text fx:id="title3" fill="#66ab38" layoutX="202.0" layoutY="861.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération 3" textAlignment="CENTER" visible="false" wrappingWidth="581.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <GridPane fx:id="gridPane3" layoutX="202.0" layoutY="878.0" prefHeight="263.0" prefWidth="581.0" style="-fx-border-color: black; -fx-background-color: #ecf0f1;" visible="false">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" wrappingWidth="88.62060546875">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date execution" textAlignment="CENTER" wrappingWidth="99.45263671875" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte Source" textAlignment="CENTER" wrappingWidth="98.40576171875" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="type3" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="384.7294921875" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="dateExec3" layoutX="136.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="390.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="cptSrc3" layoutX="136.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="389.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="41.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte Destination" textAlignment="CENTER" wrappingWidth="116.40576171875" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="cptDest3" layoutX="191.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="389.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="121.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="430.0" />
+         </columnConstraints>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Text fx:id="message" layoutX="210.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucune opération n'est effectuée  par ce guichetier" textAlignment="CENTER" visible="false" wrappingWidth="581.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1001.0" styleClass="parent" stylesheets="@../../stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.counter.AddMoneyController">
+   <children>
+      <VBox layoutX="198.0" layoutY="90.0" prefHeight="517.0" prefWidth="590.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <children>
+            <Text fill="#e10707" strokeType="OUTSIDE" strokeWidth="0.0" text="*: champs obligatoires">
+               <VBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="566.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="* num compte: ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="numCpt" prefHeight="50.0" prefWidth="340.0" promptText="numero du compte">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Text fx:id="numCptErr" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="317.7294921875">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Text>
+            <HBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="59.0" prefHeight="72.0" prefWidth="566.0">
+               <children>
+                  <Label text="* somme          ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="somme" prefHeight="50.0" prefWidth="340.0" promptText="somme à verser">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="456.0">
+               <children>
+                  <Label text="* Compte          " />
+                  <RadioButton fx:id="compteCourant" mnemonicParsing="false" selected="true" text="Courant">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="accountType" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="compteEpargne" mnemonicParsing="false" prefHeight="18.0" prefWidth="88.0" text="Epargné" toggleGroup="$accountType">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="sommeErr" fill="RED" layoutX="31.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="317.7294921875">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btn" graphicTextGap="7.0" mnemonicParsing="false" onMouseClicked="#onSubmit" prefHeight="52.0" prefWidth="191.0" style="-fx-background-color: #fed330; -fx-background-radius: 100PX; -fx-text-fill: black;" text="Verser">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="message" fill="#64a148" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="587.7294921875">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
